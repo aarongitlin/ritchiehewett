@@ -159,7 +159,7 @@ GEM
       dragonfly (~> 0.9.8)
       rack-cache (>= 0.5.3)
       refinerycms-core (= 2.0.8)
-    refinerycms-settings (2.0.2)
+    refinerycms-settings (2.0.1)
       refinerycms-core (~> 2.0.1)
     routing-filter (0.3.1)
       actionpack
@@ -203,6 +203,7 @@ DEPENDENCIES
   refinerycms-inquiries (~> 2.0.0)
   refinerycms-page-images (~> 2.0.0)
   refinerycms-recommendations!
+  refinerycms-settings (= 2.0.1)
   sass-rails (~> 3.2.3)
   sqlite3
   uglifier (>= 1.0.3)
