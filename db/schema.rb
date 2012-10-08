@@ -121,23 +121,6 @@ ActiveRecord::Schema.define(:version => 20120924123604) do
   add_index "refinery_pages", ["parent_id"], :name => "index_refinery_pages_on_parent_id"
   add_index "refinery_pages", ["rgt"], :name => "index_refinery_pages_on_rgt"
 
-  create_table "refinery_recommendations", :force => true do |t|
-    t.string   "name"
-    t.string   "role"
-    t.string   "company"
-    t.string   "company_url"
-    t.string   "source_url"
-    t.datetime "publish_date"
-    t.text     "description"
-    t.string   "youtube_id"
-    t.integer  "photo_id"
-    t.boolean  "widget_visible"
-    t.integer  "position"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
-    t.string   "slus"
-  end
-
   create_table "refinery_resources", :force => true do |t|
     t.string   "file_mime_type"
     t.string   "file_name"
