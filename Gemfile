@@ -25,6 +25,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'thin'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -48,10 +49,10 @@ gem 'refinerycms', '~> 2.0.0'
 # Specify additional Refinery CMS Extensions here (all optional):
 gem 'refinerycms-i18n',   '~> 2.0.0'
 #  gem 'refinerycms-blog', '~> 2.0.0'
-  gem 'refinerycms-inquiries', '2.0.1'
+gem "refinerycms-inquiries", "~> 2.0.3"
 #  gem 'refinerycms-search', '~> 2.0.0'
   gem 'refinerycms-page-images', '~> 2.0.0'
-gem "refinerycms-settings", "2.0.1"
+gem "refinerycms-settings", "2.0.2"
 
 #  Bootstrap
 gem 'bootstrap-sass'
