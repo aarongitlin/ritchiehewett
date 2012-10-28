@@ -1,5 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
+<<<<<<< HEAD
+=======
 
  before_filter :load_testimonials
 
@@ -8,4 +10,5 @@ class ApplicationController < ActionController::Base
   end
 
 
+>>>>>>> b9ca518cdb1c503c126c44e4af85c21f59363d77
 end

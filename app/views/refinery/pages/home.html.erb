@@ -1,1 +1,8 @@
 <%= render '/refinery/content_page' %>
+<% unless @testimonials.empty? %>
+	<% @testimonials.each do |testi| %>
+		<ul>
+			<li><%= testi.title %></li>
+		</ul>
+	<% end %>
+<% end %>

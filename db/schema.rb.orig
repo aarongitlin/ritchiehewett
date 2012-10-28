@@ -11,7 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121028075657) do
+<<<<<<< HEAD
+ActiveRecord::Schema.define(:version => 20120924123604) do
+=======
+ActiveRecord::Schema.define(:version => 20121025031835) do
+>>>>>>> b9ca518cdb1c503c126c44e4af85c21f59363d77
 
   create_table "refinery_image_page_translations", :force => true do |t|
     t.integer  "refinery_image_page_id"
@@ -85,9 +89,15 @@ ActiveRecord::Schema.define(:version => 20121028075657) do
   create_table "refinery_page_translations", :force => true do |t|
     t.integer  "refinery_page_id"
     t.string   "locale"
+<<<<<<< HEAD
     t.string   "title"
     t.string   "custom_slug"
     t.string   "menu_title"
+=======
+    t.string   "menu_title"
+    t.string   "custom_slug"
+    t.string   "title"
+>>>>>>> b9ca518cdb1c503c126c44e4af85c21f59363d77
     t.string   "slug"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
@@ -121,6 +131,7 @@ ActiveRecord::Schema.define(:version => 20121028075657) do
   add_index "refinery_pages", ["parent_id"], :name => "index_refinery_pages_on_parent_id"
   add_index "refinery_pages", ["rgt"], :name => "index_refinery_pages_on_rgt"
 
+<<<<<<< HEAD
   create_table "refinery_recommendations", :force => true do |t|
     t.string   "name"
     t.string   "role"
@@ -138,6 +149,8 @@ ActiveRecord::Schema.define(:version => 20121028075657) do
     t.string   "slus"
   end
 
+=======
+>>>>>>> b9ca518cdb1c503c126c44e4af85c21f59363d77
   create_table "refinery_resources", :force => true do |t|
     t.string   "file_mime_type"
     t.string   "file_name"
@@ -173,6 +186,8 @@ ActiveRecord::Schema.define(:version => 20121028075657) do
 
   add_index "refinery_settings", ["name"], :name => "index_refinery_settings_on_name"
 
+<<<<<<< HEAD
+=======
   create_table "refinery_testimonials", :force => true do |t|
     t.string   "title"
     t.string   "area"
@@ -181,11 +196,11 @@ ActiveRecord::Schema.define(:version => 20121028075657) do
     t.integer  "photo_id"
     t.text     "text"
     t.integer  "position"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
-    t.boolean  "is_displayed"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
+>>>>>>> b9ca518cdb1c503c126c44e4af85c21f59363d77
   create_table "refinery_user_plugins", :force => true do |t|
     t.integer "user_id"
     t.string  "name"

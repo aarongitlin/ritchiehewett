@@ -1,0 +1,12 @@
+# Be sure to restart your server when you modify this file.
+
+<<<<<<< HEAD
+RitchieHewett::Application.config.session_store :cookie_store, key: '_ritchie_hewett_session'
+=======
+RitchieHewett::Application.config.session_store :cookie_store, :key => '_ritchie_hewett_session'
+>>>>>>> b9ca518cdb1c503c126c44e4af85c21f59363d77
+
+# Use the database for sessions instead of the cookie-based default,
+# which shouldn't be used to store highly confidential information
+# (create the session table with "rails generate session_migration")
+# RitchieHewett::Application.config.session_store :active_record_store
