@@ -5,24 +5,20 @@
 		$(function(){
 			$('#slides').slides({
 				preload: true,
-				generateNextPrev: true,
-				generatePagination: false
+				generateNextPrev: true
 			});
 		});
 	</script>
 
-
- 
-  <div id="container_slider">    
-    <div id="slides">
-      <div class="slides_container">
-        <% @testimonials.each do |testimonial| %>
-          <div>
+<div id="slides">
+  <div class="slides_container">
+    <% @testimonials.each do |testimonial| %>
+      <div>
+	    <div id ="main_img_container">
               <%= link_to (image_fu testimonial.photo, nil), refinery.testimonials_testimonial_path(testimonial) %>
-
-	  <p class ="main_title"><%= raw testimonial.title %></p>
-        </div>
-        <% end %>
+	    </div>
+	<p class ="main_title"><%= raw testimonial.title %></p>
       </div>
-    </div>
+    <% end %>
   </div>
+</div>

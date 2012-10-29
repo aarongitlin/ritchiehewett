@@ -58,3 +58,7 @@ gem "refinerycms-settings", "2.0.2"
 gem 'bootstrap-sass'
 
 gem 'refinerycms-testimonials', :path => 'vendor/extensions'
+
+gem 'execjs'
+
+gem 'therubyracer'

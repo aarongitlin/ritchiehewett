@@ -85,9 +85,9 @@ ActiveRecord::Schema.define(:version => 20121028075657) do
   create_table "refinery_page_translations", :force => true do |t|
     t.integer  "refinery_page_id"
     t.string   "locale"
-    t.string   "title"
-    t.string   "custom_slug"
     t.string   "menu_title"
+    t.string   "custom_slug"
+    t.string   "title"
     t.string   "slug"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
@@ -120,23 +120,6 @@ ActiveRecord::Schema.define(:version => 20121028075657) do
   add_index "refinery_pages", ["lft"], :name => "index_refinery_pages_on_lft"
   add_index "refinery_pages", ["parent_id"], :name => "index_refinery_pages_on_parent_id"
   add_index "refinery_pages", ["rgt"], :name => "index_refinery_pages_on_rgt"
-
-  create_table "refinery_recommendations", :force => true do |t|
-    t.string   "name"
-    t.string   "role"
-    t.string   "company"
-    t.string   "company_url"
-    t.string   "source_url"
-    t.datetime "publish_date"
-    t.text     "description"
-    t.string   "youtube_id"
-    t.integer  "photo_id"
-    t.boolean  "widget_visible"
-    t.integer  "position"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
-    t.string   "slus"
-  end
 
   create_table "refinery_resources", :force => true do |t|
     t.string   "file_mime_type"
