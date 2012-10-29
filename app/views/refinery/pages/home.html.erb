@@ -18,10 +18,9 @@
       <div class="slides_container">
         <% @testimonials.each do |testimonial| %>
           <div>
-              <%= link_to (image_fu testimonial.photo, nil), refinery.testimonials_testimonial_path(testimonial) %>
-
-	  <p class ="main_title"><%= raw testimonial.title %></p>
-        </div>
+            <%= link_to (image_fu testimonial.photo, nil), refinery.testimonials_testimonial_path(testimonial) %>
+	    <div class ="main_title"><%= raw testimonial.title %></div>
+          </div>
         <% end %>
       </div>
     </div>

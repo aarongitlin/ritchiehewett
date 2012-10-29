@@ -24,23 +24,27 @@ p.subtitle{
   font-family:Helvetica;
   margin-top: 10px;
 }
+
+
 /* Main view */
 .main_title{
   font-size:40px;
   line-height:125%;
   font-family: Helvetica;
+  position:absolute;
+  top:450px;
 }
 
 .slides_container {
     width:700px;
-    height:400px;
+    height:550px;
     min-height: 10em;
     display: table-cell;
-    vertical-align: middle
+    vertical-align: middle;
 }
 .slides_container div {
     width:700px;
-    height:400px;
+    height:500px;
     display:block;
 }
 #slides{
@@ -48,7 +52,7 @@ text-align:center;
 }
 #slides .next,#slides .prev {
 	position:absolute;
-	top:200px;
+	top:250px;
 	margin-left:-25px;
         font-size:0px;
 	width:60px;
@@ -68,25 +72,20 @@ text-align:center;
 
 
 #container_slider{
-  background:blue;
   margin-left:auto;
   margin-right:auto;
   width:700px;
+  height:550px;
 }
 #container_slider  li{
   list-style-type: none;
   display: inline;
 }
 #container_slider img{
-  max-height:400px;
+  max-height:450px;
   max-width:700px;
   height:auto;
   width:auto;
-}
-#main_img_container{
-  height:400px;
-  max-width:700px;
-  background:green;
 }
 
 /* Testimonials */
