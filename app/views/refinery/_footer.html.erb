@@ -1,4 +1,9 @@
-<p>
-  <%= t('.copyright', :year => Time.now.year,
-                      :site_name => Refinery::Core.site_name) %>
-</p>
+<div class="footer-logo">
+  <%= image_tag "ritchie_logo.png", :alt => "Ritchie Hewett" %>
+</div>
+<div class="container">
+  <p>
+    <%= t('.copyright', :year => Time.now.year,
+                        :site_name => Refinery::Core.site_name) %>
+  </p>
+</div>
