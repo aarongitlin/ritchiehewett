@@ -1,27 +1,15 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-<script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
 
-	<script>
-		$(function(){
-			$('#slides').slides({
-				preload: true,
-				generateNextPrev: true,
-				generatePagination: false
-			});
-		});
-	</script>
-
-
- 
-  <div id="container_slider">    
-    <div id="slides">
-      <div class="slides_container">
-        <% @testimonials.each do |testimonial| %>
-          <div>
-            <%= link_to (image_fu testimonial.photo, nil), refinery.testimonials_testimonial_path(testimonial) %>
-	    <div class ="main_title"><%= raw testimonial.title %></div>
-          </div>
-        <% end %>
+<div id="myCarousel" class="carousel slide">
+  <!-- Carousel items -->
+  <div class="carousel-inner">
+    <% @testimonials.each_with_index do |testimonial, index| %>
+      <div class="item <% if index == 0 %> active <% end %>">
+        <%= link_to (image_fu testimonial.photo, nil), refinery.testimonials_testimonial_path(testimonial) %>
+        <div class ="slider-caption"><h4><%= raw testimonial.title %></h4></div>
       </div>
-    </div>
+      <% end %>
   </div>
+  <!-- Carousel nav -->
+  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+</div>

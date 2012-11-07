@@ -13,4 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
+//= require jquery.easing.1.3
+//= require slides.min.jquery
+//= require custom-javascript
 //= require_tree .
