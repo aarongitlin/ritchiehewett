@@ -6,7 +6,6 @@ body {
 /* Head view */
 .main_contain{
   background:white;
-  width:950px;
   margin-left:auto;
   margin-right:auto;
 }
@@ -47,39 +46,7 @@ p.subtitle{
     height:500px;
     display:block;
 }
-#slides{
-text-align:center;
-}
-#slides .next,#slides .prev {
-	position:absolute;
-	top:250px;
-	margin-left:-25px;
-        font-size:0px;
-	width:60px;
-	height:60px;
-	display:block;
-	z-index:101;
-	background:url(/images/arrow_left.png);
-        background-size:60px 60px;
-}
 
-#slides .next {
-	margin-left:675px;
-	background:url(/images/arrow_right.png);
-	background-size:60px 60px;
-     
-}
-
-#container_slider{
-  margin-left:auto;
-  margin-right:auto;
-  width:700px;
-  height:550px;
-}
-#container_slider  li{
-  list-style-type: none;
-  display: inline;
-}
 #myCarousel {
   .carousel-inner { 
     height:500px;
@@ -166,22 +133,7 @@ text-align:center;
   font-family: Helvetica;
   font-size:40px;
   text-align: center;
-  padding: 20px;
-}
-
-#testi_b_container{
-  width:820px;
-  padding-left:40px;
-}
-
-#testi_b1{
-  width: 500px;
-  float:left;
-}
-
-#testi_b2{
-  width: 280px;
-  float:right;
+  padding-bottom: 20px;
 }
 
 #testi_img{
@@ -230,7 +182,6 @@ text-align:center;
 #body_content, #side_body_content {
   margin-left:auto;
   margin-right:auto;
-  width: 900px;
   color: #333;
   padding: 20px;
 }
