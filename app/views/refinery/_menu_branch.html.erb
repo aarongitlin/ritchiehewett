@@ -2,9 +2,13 @@
   if !!local_assigns[:apply_css] and (classes = menu_branch_css(local_assigns)).any?
     css = "class='#{classes.join(' ')}'".html_safe
   end
--%><li>
-<%= link_to(menu_branch.title, refinery.url_for(menu_branch.url)) -%>
-  <% if ( (children = menu_branch.children unless hide_children).present? &&
+-%>
+<li>
+ <%= link_to(menu_branch.title, refinery.url_for(menu_branch.url), class: active_class?(refinery.url_for(menu_branch.url)))-%>
+ 
+
+
+ <% if ( (children = menu_branch.children unless hide_children).present? &&
           (!local_assigns[:menu_levels] || menu_branch.ancestors.length < local_assigns[:menu_levels]) ) -%>
       <%= render :partial => '/refinery/menu_branch', :collection => children,
                  :locals => {
@@ -12,4 +16,5 @@
                    :hide_children => !!hide_children,
                    :menu_levels => local_assigns[:menu_levels]
                  } -%>
-  <% end -%></li>
+ <% end -%>
+</li>

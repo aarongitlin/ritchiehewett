@@ -82,6 +82,7 @@ text-align:center;
 }
 #myCarousel {
   .carousel-inner { 
+    height:500px;
     text-align: center;
     img {
       max-height:450px;
@@ -92,6 +93,7 @@ text-align:center;
     .slider-caption h4 {
       color: black;
       font-family: "jubliat", serif;
+      font-size:30px;
       font-style: italic;
       font-weight: 200;
     }
@@ -193,6 +195,19 @@ text-align:center;
   width:auto;
 }
 /* Menu */
+#menu_title
+{
+ text-align:center;
+ h4{
+     padding-top:15px;
+     font-style:italic;
+     font-weight:normal;
+   } 
+}
+.active_menu
+{
+   font-size:35px;
+}
 #menu_bot {
   text-align:center;
 }
