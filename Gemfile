@@ -57,6 +57,7 @@ gem "refinerycms-settings", "2.0.2"
 
 #  Bootstrap
 gem 'bootstrap-sass'
+gem 'will_paginate-bootstrap'
 
 gem 'refinerycms-testimonials', :path => 'vendor/extensions'
 

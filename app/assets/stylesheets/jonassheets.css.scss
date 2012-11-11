@@ -71,10 +71,8 @@ p.subtitle{
 .testi_pagination {
   background: white;
   display: block;
-  text-align: center;
-  /* self-clearing method: */ }
+  text-align:center;}
   .testi_pagination a, .testi_pagination span, .testi_pagination em {
-    padding: 4px 14px;
     margin-right: 5px; }
   .testi_pagination .disabled {
     color: #999999;
@@ -120,6 +118,7 @@ p.subtitle{
 #testimonials li{
   list-style-type: none;
   display: inline;
+  padding:20px;
 }
 
 #testimonials img{
