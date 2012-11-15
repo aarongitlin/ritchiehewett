@@ -1,7 +1,48 @@
+$bodyBackground: #FFFEF8;
+$brown: #3A2A0B;
+
+$serif: "jubilat", serif;
+$sansSerif: "museo-sans", sans-serif;
+
+$testiIndexImageWidth: 48%; // based on bootstrap's span6 width in fluid rows
+$testiIndexImageHeight: 100%; 
+
+
+
+/*Bootstrap Overrides */
+.container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
+  width: 960px;
+}
 body {
-  background: #DDD;
-  font-family: Verdana;
-  font-size: 13px;
+  background: $bodyBackground;
+  font-family: $serif;
+  font-size: 16px;
+  line-height: 16px;
+  }
+  
+/* Typography */
+h1 {
+  font-family: $sansSerif;
+  font-size: 6.4em;
+  line-height: 1.0em;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center; 
+  color: $brown;
+}
+h2 {
+  font-family: $serif;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 1.8em;
+  line-height: 2.0em;
+  text-align: center;
+}
+p {
+  font-family: $serif;
+  font-size: 1.2em;
+  line-height: 1.5em;
+  font-weight: 200;
 }
 /* Head view */
 .main_contain{
@@ -13,17 +54,42 @@ body {
   text-align:center;
   padding:1px;
 }
-p.title{
-  font-size:60px;
-  font-family: Helvetica;
-  margin-bottom: 10px;
-}
-p.subtitle{
-  font-size:20px;
-  font-family:Helvetica;
-  margin-top: 10px;
-}
 
+/* Menu */
+
+#menu_bot {
+  text-align:center;
+}
+ul#navlist {
+  border-bottom: 1px dotted black;
+  border-top: 1px dotted black;
+  padding: 10px 0;
+  margin-left: 0;
+  li {
+    display: inline;
+    padding-right: 40px;
+    font-size: 18px;
+    font-family: "jubilat", serif;
+    font-weight: 200;
+    &.last {
+      padding-right: 0;
+    }
+    a {
+      padding: 9px 15px;
+      color: $brown;
+      &:hover {
+        border-left: 1px dotted $brown;
+        border-right: 1px dotted $brown;
+        padding: 9px 14px; /* lower padding to make room for border */
+        text-decoration: none;
+      }
+    }
+  }
+  li.selected a {
+    color: $bodyBackground;
+    background-color: $brown;
+  }
+}
 
 /* Main view */
 .main_title{
@@ -33,8 +99,12 @@ p.subtitle{
   position:absolute;
   top:450px;
 }
+/* Home Page */
 
 #myCarousel {
+  background: white;
+  border: 2px dotted $brown;
+  padding: 5px;
   .carousel-inner { 
     height:500px;
     text-align: center;
@@ -46,15 +116,19 @@ p.subtitle{
     }
     .slider-caption h4 {
       color: black;
-      font-family: "jubliat", serif;
-      font-size:30px;
+      font-family: $serif;
+      font-size: 1.2em;
       font-style: italic;
       font-weight: 200;
+      text-align: left;
+      margin-left: 5%;
     }
   }
 }
 
 /* Testimonials */
+#testimonials {
+}
 .testi_pagination {
   background: white;
   display: block;
@@ -85,15 +159,15 @@ p.subtitle{
   line-height:10px;
 }
 .testi_list_container{
-  width:800px;
-  clear:both;
-  padding-top:50px;
+  padding-top: 50px;
+  height: 100%;
 }
 .testi_list_img_container{
-  width:400px;
-  height:250px;
   text-align:center;
-  float:left;
+  img {
+    max-width: $testiIndexImageWidth;
+    height: $testiIndexImageHeight;
+  }
 }
 .testi_list_txt_container{
   font-style:Arial;
@@ -132,36 +206,22 @@ p.subtitle{
   height:auto;
   width:auto;
 }
-/* Menu */
-#menu_title
-{
- text-align:center;
- h4{
-     padding-top:15px;
-     font-style:italic;
-     font-weight:normal;
-   } 
-}
-.active_menu
-{
-   font-size:35px;
-}
-#menu_bot {
-  text-align:center;
-}
-#navlist {
-  li {
-    display: inline;
-    padding-right: 15px;
-    font-size: 18px;
-    font-family: "jubilat", serif;
-    font-weight: 200;
+
+
+/* Footer */
+
+footer {
+  width: 100%;
+  text-align: center;
+  p {
+  margin: auto;
+  padding-bottom: 10px;
   }
 }
 
-/* Footer */
-.footer{
-  text-align:center;
+.footer-logo {
+  text-align: center;
+  margin: auto;
 }
 
 /************************************/
@@ -173,11 +233,53 @@ p.subtitle{
 }
 
 /* Responsive stuff */
-
+/* Landscape phone to portrait tablet */
+@media (max-width: 979px) { 
+ .container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
+   width: 724px;
+ }
+ h1 {
+   font-size: 5.0em;
+ }
+}
+@media (max-width: 767px) { 
+  .container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
+     width: 100%;
+   }
+   ul#navlist {
+     margin-left: 0;
+     li {
+       padding-right: 10px;
+     }
+   }
+   h1 {
+     font-size: 3.3em;
+   }
+}
 @media (max-width: 480px) { 
-  #navlist {
+  .container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
+     width: 100%;
+   }
+   h1 {
+     font-size: 2.5em;
+   }
+   h2 {
+     font-size: 1.4em;
+   }
+  ul#navlist {
     li {
       display: block;
+      padding: 0;
+      a {
+        display: inline-block;
+        width: 100%;
+        padding: 10px 0;
+        &:hover {
+         padding: 8px 0;
+         border: 1px dotted $brown;
+         width: 99%;
+        }
+      }
     }
   }
 }
