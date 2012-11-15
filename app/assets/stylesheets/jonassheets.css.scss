@@ -103,14 +103,16 @@ ul#navlist {
 
 #myCarousel {
   background: white;
-  border: 2px dotted $brown;
   padding: 5px;
+  box-shadow: 2px 2px 3px $brown;
+  -o-box-shadow: 2px 2px 3px $brown;
+  -webkit-box-shadow: 2px 2px 3px $brown;
+  -ms-box-shadow: 2px 2px 3px $brown;
+  -moz-box-shadow: 2px 2px 3px $brown;
   .carousel-inner { 
     height:500px;
     text-align: center;
     img {
-      max-height:450px;
-      max-width:700px;
       height:auto;
       width:auto;
     }
@@ -213,6 +215,9 @@ ul#other_testimonials {
   height:auto;
   width:auto;
 }
+#testi_descrip {
+  padding-top: 20px;
+}
 .next-prev {
   .next {
     float: right;
@@ -269,6 +274,10 @@ footer {
    h1 {
      font-size: 3.3em;
    }
+   #myCarousel .carousel-inner { 
+     height:380px;
+    }
+    
 }
 @media (max-width: 480px) { 
   .container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
