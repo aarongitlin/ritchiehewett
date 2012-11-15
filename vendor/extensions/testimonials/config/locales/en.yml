@@ -19,7 +19,7 @@ en:
             edit: Edit this testimonial
             delete: Remove this testimonial forever
       testimonials:
-        show:
+        other_testimonials:
           other: Other Testimonials
   activerecord:
     attributes:

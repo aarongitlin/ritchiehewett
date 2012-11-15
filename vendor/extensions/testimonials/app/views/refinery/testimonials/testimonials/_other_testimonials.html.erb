@@ -1,0 +1,14 @@
+<aside>
+  <h4><%= t('.other') %></h4>
+  <ul id="other_testimonials">
+    <% @testimonials.take(4).each do |testimonial| %>
+      <% if testimonial.id != @testimonial.id %>
+        <li>
+          <%= link_to refinery.testimonials_testimonial_path(testimonial) do %>
+            <%= image_fu testimonial.photo, '100x100' %>
+          <% end %>
+        </li>
+      <% end %>
+    <% end %>
+  </ul>
+</aside>

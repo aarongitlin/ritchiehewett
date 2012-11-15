@@ -5,35 +5,33 @@
 <% end %>
 
 <% content_for :body do %>
+  <div class="row-fluid">
     <div id="testi_img">
       <%= image_fu @testimonial.photo, nil %>
     </div>
+  </div>
   
- <div class="row">
-    <div class="span7 offset1">
+ <div class="row-fluid">
+    <div class="span8">
       <%=raw @testimonial.text %>
     </div>
-    <div class="span2">
+    <div class="span3 offset1">
       <%=raw @testimonial.date.strftime('%B %Y')  %><br>
       <%=raw @testimonial.area %><br>
       <%=raw @testimonial.location %>
     </div>
  </div>
- <%= link_to "Previous", refinery.testimonials_testimonial_path(@testimonial.previous) if !@testimonial.previous.nil? %>
- <%= link_to "Next", refinery.testimonials_testimonial_path(@testimonial.next) if !@testimonial.next.nil? %>
+ 
+  <div class="row-fluid next-prev">
+    <div class="span8">
+      <%= link_to "Previous Testimonial", refinery.testimonials_testimonial_path(@testimonial.previous), :class => "previous" if !@testimonial.previous.nil? %>
+      <%= link_to "Next Testimonial", refinery.testimonials_testimonial_path(@testimonial.next), :class =>"next" if !@testimonial.next.nil? %>
+    </div>
+  </div>
 <% end %>
 
 <% content_for :side_body do %>
-  <aside>
-    <h2><%= t('.other') %></h2>
-    <ul id="testimonials">
-      <% @testimonials.each do |testimonial| %>
-        <li>
-          <%= link_to testimonial.title, refinery.testimonials_testimonial_path(testimonial) %>
-        </li>
-      <% end %>
-    </ul>
-  </aside>
+  <%= render 'other_testimonials' %>
 <% end %>
 
 <%= render "/refinery/content_page" %>
