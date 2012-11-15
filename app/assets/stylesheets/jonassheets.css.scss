@@ -176,10 +176,16 @@ ul#navlist {
   padding:5px;
 }
 
-#testimonials li{
-  list-style-type: none;
-  display: inline;
-  padding:20px;
+ul#other_testimonials {
+  margin-left: 0;
+  li {
+    list-style-type: none;
+    display: inline;
+    padding:20px;
+    &:first-child {
+      padding-left: 0;
+    }
+  }
 }
 
 #testimonials img{
@@ -188,6 +194,7 @@ ul#navlist {
   height:auto;
   width:auto;  
 }
+
 /* Testimonial */
 #testi_title{
   font-family: Helvetica;
@@ -206,7 +213,14 @@ ul#navlist {
   height:auto;
   width:auto;
 }
-
+.next-prev {
+  .next {
+    float: right;
+  }
+  .previous {
+    float: left;
+  }
+}
 
 /* Footer */
 
