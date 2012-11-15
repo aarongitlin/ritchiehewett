@@ -15,5 +15,6 @@
 //= require bootstrap
 //= require jquery.easing.1.3
 //= require slides.min.jquery
+//= require jquery.pageless
 //= require custom-javascript
 //= require_tree .
