@@ -1,0 +1,14 @@
+<section class="row-fluid">
+  <div class="testi_list_container">
+    <div class="testi_list_img_container span6">
+      <%= link_to (image_fu testimonial.photo, nil), refinery.testimonials_testimonial_path(testimonial) %>
+    </div>
+    <div class = "testi_list_txt_container span6">
+      <h3 class = "testi_list_header"><%= raw testimonial.title %></h3>
+      <small class = "testi_list_date"><%= raw testimonial.date.strftime('%B %Y') %></small>
+	    <p class="testi_list_descrip"><%=raw truncate(testimonial.text,  
+            :length => 350) %>
+		    <%= link_to "Read More", refinery.testimonials_testimonial_path(testimonial) %></p>
+	  </div>
+  </div>
+</section>
