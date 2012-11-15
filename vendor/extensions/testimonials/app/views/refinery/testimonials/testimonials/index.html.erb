@@ -1,6 +1,6 @@
 <% content_for :body do %>
  <% unless @testimonials.blank? %>
-   <article id="testimonials" class="list" last="<%=@testimonials.to_a.last.created_at%>">
+   <article id="testimonials">
      <%= render :partial => "testimonial", :collection => @testimonials %>
    </article>
  <% end %>
