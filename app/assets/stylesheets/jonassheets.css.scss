@@ -55,6 +55,22 @@ p {
   padding:1px;
 }
 
+#page_loading {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  left: 50%;
+  margin-left: -30px;
+  background-image: url("/assets/loading.gif");
+  display: none;
+}
+#mask {
+  position: absolute; 
+  height: 100%;
+  background-color:$bodyBackground; 
+  z-index:99;
+  display: block;
+}
 /* Menu */
 
 #menu_bot {
@@ -104,6 +120,7 @@ ul#navlist {
 #myCarousel {
   background: white;
   padding: 5px;
+  height: 500px;
   box-shadow: 2px 2px 3px $brown;
   -o-box-shadow: 2px 2px 3px $brown;
   -webkit-box-shadow: 2px 2px 3px $brown;
@@ -114,6 +131,8 @@ ul#navlist {
     text-align: center;
     img {
       height:auto;
+      min-height: 300px;
+      max-height: 465px;
       width:auto;
     }
     .slider-caption h4 {
