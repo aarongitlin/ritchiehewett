@@ -10,7 +10,7 @@ module Refinery
         # you can use meta fields from your model instead (e.g. browser_title)
         # by swapping @page for @testimonial in the line below:
         if request.xhr?
-          sleep(3)
+          sleep(2)
           render :partial => @testimonials
         end
         present(@page)
