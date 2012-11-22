@@ -15,11 +15,10 @@ $(document).on('page:fetch', function() {
 $(function(){
   var bodyWidth = $('section#body_content').width();
   var bodyHeight = $('section#body_content').height();
-  $('#mask').show();
   $('#mask').width(bodyWidth + 30);
   $('#mask').height(bodyHeight);
-  $('#mask').fadeOut(1200);
-});
+  $('#body_content').load($('#mask').fadeOut(800));
+}); 
 
 $(function(){
   $('input[type="submit"]').addClass('btn');
