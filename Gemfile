@@ -62,6 +62,7 @@ gem 'will_paginate-bootstrap'
 gem 'refinerycms-testimonials', :path => 'vendor/extensions'
 
 gem 'execjs'
+gem 'turbolinks'
 
 gem 'therubyracer'
 gem 'newrelic_rpm'

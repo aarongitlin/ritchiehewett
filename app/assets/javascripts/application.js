@@ -16,5 +16,6 @@
 //= require jquery.easing.1.3
 //= require slides.min.jquery
 //= require jquery.pageless
+//= require turbolinks
 //= require custom-javascript
 //= require_tree .
