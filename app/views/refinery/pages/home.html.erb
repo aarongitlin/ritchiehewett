@@ -5,7 +5,7 @@
   <div class="carousel-inner">
     <% @testimonials.each_with_index do |testimonial, index| %>
       <div class="item <% if index == 0 %> active <% end %>">
-        <%= link_to (image_fu testimonial.photo, nil), refinery.testimonials_testimonial_path(testimonial) %>
+        <%= link_to (image_fu testimonial.photo, '980x500#'), refinery.testimonials_testimonial_path(testimonial) %>
         <div class ="slider-caption"><h4><%= raw testimonial.title %></h4></div>
       </div>
       <% end %>
@@ -14,4 +14,8 @@
   <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
   <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
 </div>
+  <div class="home-text">
+    <h2><%= raw @page.content_for :body %></h2>
+    <%= raw @page.content_for :side_body %>
+  </div>
 </section>
