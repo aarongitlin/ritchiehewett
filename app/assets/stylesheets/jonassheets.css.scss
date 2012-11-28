@@ -118,21 +118,15 @@ ul#navlist {
 /* Home Page */
 
 #myCarousel {
-  background: white;
-  padding: 5px;
-  height: 500px;
-  box-shadow: 2px 2px 3px $brown;
-  -o-box-shadow: 2px 2px 3px $brown;
-  -webkit-box-shadow: 2px 2px 3px $brown;
-  -ms-box-shadow: 2px 2px 3px $brown;
-  -moz-box-shadow: 2px 2px 3px $brown;
+  height: auto;
+  width: 105%;
+  left: -2.5%;
   .carousel-inner { 
-    height:500px;
     text-align: center;
     img {
       height:auto;
       min-height: 300px;
-      max-height: 465px;
+      max-height: 490px;
       width:auto;
     }
     .slider-caption h4 {
@@ -146,7 +140,20 @@ ul#navlist {
     }
   }
 }
-
+.carousel-control {
+  &.right {
+    right: -55px;
+  }
+  &.left {
+    left: -55px;
+  }
+}
+.home-text {
+  width: 75%;
+  h2 {
+    text-align: left;
+  }
+}
 /* Testimonials */
 #testimonials {
 }
@@ -295,7 +302,15 @@ footer {
    }
    #myCarousel .carousel-inner { 
      height:380px;
+  }
+  .carousel-control {
+    &.right, &.left {
+      display: none;
     }
+  }
+  .home-text {
+    width: 100%;
+  }
     
 }
 @media (max-width: 480px) { 
